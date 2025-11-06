@@ -1,13 +1,21 @@
+import Image from 'next/image';
 import Link from 'next/link';
+
+import { HERO_IMAGE_DATA_URL } from './lib/heroImageDataUrl';
 
 export default function Home() {
   return (
     <div className="space-y-12">
       {/* Hero Image */}
-      <div className="bg-gray-100 rounded-lg h-64 lg:h-96 flex items-center justify-center -mx-6 lg:-mx-12 -mt-12 lg:-mt-16 mb-8">
-        <p className="text-gray-400 text-center px-4">
-          Hero-kuva: Rauhallinen kuva luonnosta, kynttilöistä tai hoitohuoneesta
-        </p>
+      <div className="bg-gray-100 rounded-lg h-64 lg:h-96 -mx-6 lg:-mx-12 -mt-12 lg:-mt-16 mb-8 relative overflow-hidden">
+        <Image
+          src={HERO_IMAGE_DATA_URL}
+          alt="Kolme kynttilää ja kaksi valkoista pyyherullaa vihreän kasvin vieressä"
+          fill
+          priority
+          className="object-cover"
+          sizes="(min-width: 1024px) 100vw, 100vw"
+        />
       </div>
 
       {/* Hero Section */}
