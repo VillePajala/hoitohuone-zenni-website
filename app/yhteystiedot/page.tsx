@@ -28,8 +28,8 @@ export default function ContactPage() {
             <div>
               <h3 className="font-semibold text-gray-900 mb-2">Osoite</h3>
               <p className="text-gray-700">
-                [Katuosoite]<br />
-                [Postinumero] Lappeenranta
+                Salpapuistonkatu 7<br />
+                53850 Lappeenranta
               </p>
             </div>
 
@@ -81,13 +81,21 @@ export default function ContactPage() {
         <h2 className="text-2xl font-semibold text-gray-900 mb-6">
           Löydä perille
         </h2>
-        {/* Placeholder for map */}
-        <div className="bg-gray-100 rounded-lg h-96 flex items-center justify-center">
-          <p className="text-gray-400">Kartta tulossa</p>
+        {/* Google Maps embed */}
+        <div className="rounded-lg overflow-hidden h-96 w-full">
+          <iframe
+            src="https://maps.google.com/maps?q=Salpapuistonkatu+7,+53850+Lappeenranta&output=embed"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
         <div className="mt-4">
           <p className="text-gray-700">
-            [Reittiohjeet ja pysäköintiohjeet tulevat tähän]
+            Hoitohuone sijaitsee Lappeenrannassa, Salpapuistonkatu 7. Pysäköintipaikkoja löytyy kadun varrelta.
           </p>
         </div>
       </section>
